@@ -9,9 +9,8 @@ cask "polarclock" do
 
   screen_saver "PolarClock.saver"
 
-  caveats <<~EOS
-    This screen saver is not signed. After installation, you may need to:
-    1. Open System Settings → Privacy & Security
-    2. Click "Open Anyway" when prompted about the unidentified developer
-  EOS
+  postflight do
+    system_command "/usr/bin/xattr",
+                   args: ["-cr", "#{Dir.home}/Library/Screen Savers/PolarClock.saver"]
+  end
 end
