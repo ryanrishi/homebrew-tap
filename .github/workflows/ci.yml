@@ -1,0 +1,19 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  style:
+    runs-on: macos-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      # brew bump-cask-pr runs this before it opens a pull request, so an
+      # offense here blocks every version bump.
+      - name: Check style
+        run: brew style .
