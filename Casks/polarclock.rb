@@ -1,6 +1,6 @@
 cask "polarclock" do
-  version "1.0.0"
-  sha256 "db89c51697bc4400fe60ebcca6f5964a789f03b9744344b1ce1c1eeca93942a9"
+  version "1.1.0"
+  sha256 "31b34afce463cf731e23afa3cd7ce09907e105acfa7e489b5a8711588de51292"
 
   url "https://github.com/ryanrishi/PolarClock/releases/download/v#{version}/PolarClock.saver.zip"
   name "PolarClock"
