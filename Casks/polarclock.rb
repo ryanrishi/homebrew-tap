@@ -4,8 +4,10 @@ cask "polarclock" do
 
   url "https://github.com/ryanrishi/PolarClock/releases/download/v#{version}/PolarClock.saver.zip"
   name "PolarClock"
-  desc "Polar clock screen saver for macOS"
+  desc "Screen saver that draws the date and time as concentric arcs"
   homepage "https://github.com/ryanrishi/PolarClock"
+
+  depends_on :macos
 
   screen_saver "PolarClock.saver"
 
